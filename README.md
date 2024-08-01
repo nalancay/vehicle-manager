@@ -6,10 +6,10 @@
 
 Este módulo incluye las siguientes funcionalidades:
 
-1.  Visualización de vehículos registrados por los clientes en una tabla.\
-2.  Filtrado de vehículos por diversos parámetros.\
-3.  Ordenamiento de forma ascendente y descendente de vehículos según las necesidades del cliente al hacer clic en una columna del encabezado de la tabla.\
-4.  Muestra un mapa con la ubicación del vehículo (generada de forma aleatoria).
+1.  Visualización de vehículos registrados por los clientes en una tabla.
+2.  Filtrado de vehículos por diversos parámetros.
+3.  Ordenamiento de forma ascendente y descendente de vehículos según las necesidades del cliente al hacer clic en una columna del encabezado de la tabla.
+4.  Muestra un mapa con la ubicación del vehículo (generada de forma aleatoria) al hacer click en un registro de la tabla.
 
 ## Detalles Técnicos
 
