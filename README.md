@@ -1,46 +1,51 @@
-# Getting Started with Create React App
+## Enlace al Sitio Web
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Haz clic aquí para ver el sitio web del Gestor de Vehículos.](https://nalancay-vehicle-manager.netlify.app/).
 
-## Available Scripts
+## Módulo "Gestor de Vehículos".
 
-In the project directory, you can run:
+Este módulo incluye las siguientes funcionalidades:
 
-### `npm start`
+1.  Visualización de vehículos registrados por los clientes en una tabla.\
+2.  Filtrado de vehículos por diversos parámetros.\
+3.  Ordenamiento de forma ascendente y descendente de vehículos según las necesidades del cliente al hacer clic en una columna del encabezado de la tabla.\
+4.  Muestra un mapa con la ubicación del vehículo (generada de forma aleatoria).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Detalles Técnicos
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Esta aplicación se desarrolló en ✨ React, utilizando:\
+  ✨ react-router-dom para el enrutamiento de páginas.\
+  ✨ TypeScript para el tipado de datos.\
+  ✨ styled-components para el manejo de estilos.\
+  ✨ leaflet para la visualización de mapa.\
+  ✨ React Testing Library y Jest para pruebas.\
+  ✨ Diseño responsivo para desktop y mobile.\
+  ✨ Consumo de API utilizando custom hooks para manejar el estado de carga, errores y datos.
 
-### `npm test`
+### Pasos para ejecutar el proyecto localmente
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clonar el repositorio**:
 
-### `npm run build`
+   - Clone el repositorio en un directorio local de su elección.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Instalar dependencias**:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   - Navegue hasta el directorio raíz del proyecto.
+   - Instale los paquetes necesarios con el siguiente comando:
+     ```bash
+     npm install
+     ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Iniciar el proyecto**:
+   - Levante el proyecto con el siguiente comando:
+     ```bash
+     npm start
+     ```
 
-### `npm run eject`
+### Ejecutar pruebas
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Para ejecutar las pruebas, use el siguiente comando:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm test
+```

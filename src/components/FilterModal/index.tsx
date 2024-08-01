@@ -30,31 +30,31 @@ const FilterModal: React.FC<FilterModalProps> = ({
     minConsumption: "",
     maxConsumption: "",
   };
-  const [filters, setFilters] = useState(initialValues);
+  const [dataFrom, setDataFrom] = useState(initialValues);
   const [isFormFilled, setIsFormFilled] = useState(false);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setFilters({
-      ...filters,
+    setDataFrom({
+      ...dataFrom,
       [event.target.name]: event.target.value,
     });
   };
 
   const handleClearFilters = () => {
-    setFilters(initialValues);
+    setDataFrom(initialValues);
   };
 
   const handleApplyFilters = () => {
-    onApplyFilters(filters);
+    onApplyFilters(dataFrom);
     onClose();
   };
 
   useEffect(() => {
-    const hasValues = Object.values(filters).some(
+    const hasValues = Object.values(dataFrom).some(
       (value) => value.trim() !== ""
     );
     setIsFormFilled(hasValues);
-  }, [filters]);
+  }, [dataFrom]);
 
   if (!isOpen) return null;
 
@@ -63,26 +63,47 @@ const FilterModal: React.FC<FilterModalProps> = ({
       <ModalContent>
         <h2>Filtrar Vehículos</h2>
         <Field>
-          <Label>Tipo de Auto</Label>
-          <Input name="type" value={filters.type} onChange={handleChange} />
-        </Field>
-        <Field>
-          <Label>Marca</Label>
-          <Input name="make" value={filters.make} onChange={handleChange} />
-        </Field>
-        <Field>
-          <Label>Modelo</Label>
-          <Input name="model" value={filters.model} onChange={handleChange} />
-        </Field>
-        <Field>
-          <Label>Año</Label>
-          <Input name="year" value={filters.year} onChange={handleChange} />
-        </Field>
-        <Field>
-          <Label>Tipo de Transmisión</Label>
+          <Label htmlFor="type">Tipo de Auto</Label>
           <Input
+            id="type"
+            name="type"
+            value={dataFrom.type}
+            onChange={handleChange}
+          />
+        </Field>
+        <Field>
+          <Label htmlFor="make">Marca</Label>
+          <Input
+            id="make"
+            name="make"
+            value={dataFrom.make}
+            onChange={handleChange}
+          />
+        </Field>
+        <Field>
+          <Label htmlFor="model">Modelo</Label>
+          <Input
+            id="model"
+            name="model"
+            value={dataFrom.model}
+            onChange={handleChange}
+          />
+        </Field>
+        <Field>
+          <Label htmlFor="year">Año</Label>
+          <Input
+            id="year"
+            name="year"
+            value={dataFrom.year}
+            onChange={handleChange}
+          />
+        </Field>
+        <Field>
+          <Label htmlFor="transmission">Tipo de Transmisión</Label>
+          <Input
+            id="transmission"
             name="transmission"
-            value={filters.transmission}
+            value={dataFrom.transmission}
             onChange={handleChange}
           />
         </Field>
@@ -93,14 +114,14 @@ const FilterModal: React.FC<FilterModalProps> = ({
             <RangeInput
               type="number"
               name="minConsumption"
-              value={filters.minConsumption}
+              value={dataFrom.minConsumption}
               onChange={handleChange}
             />
             <Label>Max: </Label>
             <RangeInput
               type="number"
               name="maxConsumption"
-              value={filters.maxConsumption}
+              value={dataFrom.maxConsumption}
               onChange={handleChange}
             />
           </StylesContainer>

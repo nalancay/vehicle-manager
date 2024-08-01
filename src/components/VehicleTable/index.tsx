@@ -58,7 +58,7 @@ const VehicleTable: React.FC<VehicleTableProps> = ({
   });
 
   if (isLoading) {
-    return <CircularProgress />;
+    return <CircularProgress role="progressbar" />;
   }
 
   return (

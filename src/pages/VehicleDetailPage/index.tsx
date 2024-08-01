@@ -15,7 +15,7 @@ const ButtonBack = (props: any) => {
 
   return (
     <ContentStyle>
-      <LinkStyle to={pathLink}>{`${textButton}`}</LinkStyle>{" "}
+      <LinkStyle to={pathLink} role="link">{`${textButton}`}</LinkStyle>{" "}
       <i className={icon} /> <span>Detalles de ubicación del vehículo</span>
     </ContentStyle>
   );
@@ -40,14 +40,16 @@ const VehicleDetailPage: React.FC = () => {
       <h2>
         {typeCar} - {model} - {year}
       </h2>
-      <MapContainer
-        center={location}
-        zoom={12}
-        style={{ height: "400px", width: "100%" }}
-      >
-        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-        <Marker position={location} />
-      </MapContainer>
+      <div role="presentation-map">
+        <MapContainer
+          center={location}
+          zoom={12}
+          style={{ height: "400px", width: "100%" }}
+        >
+          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+          <Marker position={location} />
+        </MapContainer>
+      </div>
     </div>
   );
 };
